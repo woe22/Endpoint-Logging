@@ -2,13 +2,13 @@
 
 ---
 
-## 🧠 Objective
+##  Objective
 
 Set up endpoint-level visibility on a Windows machine using Sysmon and native Windows Event Logs. Simulate common adversary behaviors, and capture relevant events for detection and mapping to MITRE ATT&CK techniques.
 
 ---
 
-## 🔧 Tools & Environment
+##  Tools & Environment
 
 - Windows 10 Virtual Machine
 - Sysmon (Sysinternals)
@@ -18,7 +18,7 @@ Set up endpoint-level visibility on a Windows machine using Sysmon and native Wi
 
 ---
 
-## 🎯 Lab Goals
+##  Lab Goals
 
 - Install and configure Sysmon with a custom config
 - Understand critical Windows event IDs
@@ -28,7 +28,7 @@ Set up endpoint-level visibility on a Windows machine using Sysmon and native Wi
 
 ---
 
-## 🔒 Real-World Relevance
+##  Real-World Relevance
 
 Endpoint logging is a core foundation for any SOC. Without detailed telemetry, detection and response are blind. This lab simulates what Tier 1 analysts often triage: real-time process activity, command-line execution, and persistence indicators.
 
