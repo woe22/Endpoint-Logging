@@ -10,17 +10,7 @@ After enabling enhanced logging in prior modules, including Sysmon and native Wi
 
 ## What I Did
 
-```
-# Enabled ScriptBlock and Module Logging via Registry
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Force
-Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Name "EnableScriptBlockLogging" -Value 1 -Force
 
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Force
-Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Name "EnableModuleLogging" -Value 1 -Force
-New-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Name "ModuleNames" -Value "*" -PropertyType MultiString -Force
-```
-
-- Rebooted to activate logging
 - Simulated various attacker behaviors:
   - Created scheduled task: `schtasks /create /sc once /tn test /tr "notepad.exe" /st 23:59`
   - Ran PowerShell commands
